@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <title>CloudSponge Basic Installation</title>
+  <!-- you can delete everything above this comment, it's just here to make the helper pretty. -->
+
+  <script src="//api.cloudsponge.com/widget/localhost-only.js"></script>
+  <script type="text/javascript">
+    // this is where you can configure the behavior and style of the widget
+    // http://www.cloudsponge.com/developer/#the-contact-importer-widget
+    cloudsponge.init({
+      sources: ['gmail','yahoo','windowslive','icloud','aol','linkedin'],
+      // display only emails in the textarea
+      include: ["email"]
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Import email cntacts from CloudSponge!</h1>
+    <p>The simplest way to integrate the CloudSponge widget is to add an anchor tag with the <code>cloudsponge-launch</code> class somewhere on your page.</p>
+
+    <!-- Any link with a class="cs_import" will start the import process -->
+    <a class="cloudsponge-launch btn btn-success">Add from Address Book</a><br />
+
+    <p>The easiest way to populate an element is to give it a class or <code>cloudsponge-contacts</code>.</p>
+    <!-- This textarea will be populated with the contacts returned by CloudSponge -->
+    <textarea class="cloudsponge-contacts" placeholder="Type email addresses separated by commas or select them from your address book by clicking the link above." id="contact_list" style="width:450px;height:82px"></textarea>
+
+    <div>
+    </div>
+
+  </div>
+</body>
+</html>

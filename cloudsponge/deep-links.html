@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <title>CloudSponge Deep Link Installation</title>
+  <!-- you can delete everything above this comment, it's just here to make the helper pretty. -->
+
+  <script src="//api.cloudsponge.com/widget/localhost-only.js"></script>
+  <script type="text/javascript">
+    // this is where you can configure the behavior and style of the widget
+    // http://www.cloudsponge.com/developer/#the-contact-importer-widget
+    cloudsponge.init({
+      sources: ['gmail','yahoo','windowslive','icloud','aol','linkedin'],
+      include: ["email"]
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Deep Link Integration</h1>
+    <p>You can skip the main menu and let your users go straight to the contact source that they want by adding these deep links to your page.</p>
+    <p>Most people replace these text links with graphics. You can <a href="http://www.cloudsponge.com/img/developer/icon-set.zip">download some icons here</a> if you don't have your own set.</p>
+
+    <!-- Any link with a class="cs_import" will start the import process -->
+    <a class="cloudsponge-launch" data-cloudsponge-source="gmail">Gmail</a><br />
+    <a class="cloudsponge-launch" data-cloudsponge-source="yahoo">Yahoo</a><br />
+    <a class="cloudsponge-launch" data-cloudsponge-source="windowslive">Outlook.com</a><br />
+    <a class="cloudsponge-launch" data-cloudsponge-source="icloud">iCloud</a><br />
+    <a class="cloudsponge-launch" data-cloudsponge-source="aol">AOL</a><br />
+    <a class="cloudsponge-launch" data-cloudsponge-source="linkedin">LinkedIn</a><br />
+    <a class="cloudsponge-launch" data-cloudsponge-source="addressbook">OS X Contacts</a><br />
+    <a class="cloudsponge-launch" data-cloudsponge-source="outlook">Outlook</a><br />
+    <br />
+
+    <!-- This textarea will be populated with the contacts returned by CloudSponge -->
+    <textarea class="cloudsponge-contacts" placeholder="Type email addresses separated by commas or select them from your address book by clicking the link above." style="width:450px;height:82px"></textarea>
+
+    <div>
+      <a href="/">
+        Back
+      </a>
+    </div>
+  </div>
+</body>
+</html>
